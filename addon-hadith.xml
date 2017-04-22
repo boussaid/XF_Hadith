@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<addon addon_id="hadith" title="حديث" version_string="1.2" version_id="3" url="" install_callback_class="" install_callback_method="" uninstall_callback_class="" uninstall_callback_method="">
+  <admin_navigation/>
+  <admin_permissions/>
+  <admin_style_properties/>
+  <admin_templates/>
+  <admin_template_modifications/>
+  <code_events/>
+  <code_event_listeners>
+    <listener event_id="navigation_tabs" execute_order="10" callback_class="Hadith_Dorar" callback_method="hadithTab" active="1" hint="" description=""/>
+  </code_event_listeners>
+  <cron/>
+  <email_templates/>
+  <email_template_modifications/>
+  <optiongroups/>
+  <permissions>
+    <permission_groups/>
+    <permissions/>
+    <interface_groups/>
+  </permissions>
+  <phrases>
+    <phrase title="hadith" version_id="1" version_string="1.0"><![CDATA[الحديث]]></phrase>
+    <phrase title="hadith_confirm" version_id="1" version_string="1.0"><![CDATA[تحقق من صحة الحديث بسهولة]]></phrase>
+    <phrase title="hadith_desc" version_id="1" version_string="1.0"><![CDATA[أسرع طريقة للتحقق من صحة الأحاديث]]></phrase>
+    <phrase title="hadith_dorar" version_id="1" version_string="1.0"><![CDATA[التحقق من صحة الأحاديث يعتمد على قاعدة بيانات <a href="http://dorar.net/hadith" target="_blank">موقع الدرر السنية</a> ، لا نملك أي مسؤولية أو حقوق للمحتوى الموجود في الأحاديث]]></phrase>
+    <phrase title="style_property_group_hadith_master" version_id="1" version_string="1.0"><![CDATA[تنسيق صفحة الحديث]]></phrase>
+    <phrase title="style_property_group_hadith_master_desc" version_id="1" version_string="1.0"><![CDATA[تنسيق صفحة الحديث]]></phrase>
+    <phrase title="style_property_hadithContent_description_master" version_id="1" version_string="1.0"><![CDATA[تنسيق الإطار المحيط بنتائج البحث]]></phrase>
+    <phrase title="style_property_hadithContent_master" version_id="1" version_string="1.0"><![CDATA[محيط نتائج البحث]]></phrase>
+    <phrase title="style_property_hadithMain_description_master" version_id="1" version_string="1.0"><![CDATA[تنسيق حقل البحث الموجود بالصفحة الرئيسية.]]></phrase>
+    <phrase title="style_property_hadithMain_master" version_id="1" version_string="1.0"><![CDATA[حقل البحث]]></phrase>
+    <phrase title="style_property_rawiInfo_description_master" version_id="1" version_string="1.0"><![CDATA[معلومات الحديث، الراوي و الصفحة و الصحة ... الخ]]></phrase>
+    <phrase title="style_property_rawiInfo_master" version_id="1" version_string="1.0"><![CDATA[معلومات الحديث]]></phrase>
+    <phrase title="style_property_searchbtn_description_master" version_id="2" version_string="1.1"><![CDATA[]]></phrase>
+    <phrase title="style_property_searchbtn_master" version_id="2" version_string="1.1"><![CDATA[زر البحث]]></phrase>
+    <phrase title="style_property_searchKey_description_master" version_id="1" version_string="1.0"><![CDATA[تمييز كلمة البحث]]></phrase>
+    <phrase title="style_property_searchKey_master" version_id="1" version_string="1.0"><![CDATA[كلمة البحث]]></phrase>
+    <phrase title="style_property_showShare_description_master" version_id="1" version_string="1.0"><![CDATA[عرض ايقونات مشاركة الصفحة في وسائل التواصل.]]></phrase>
+    <phrase title="style_property_showShare_master" version_id="1" version_string="1.0"><![CDATA[عرض مشاركة الصفحة]]></phrase>
+    <phrase title="style_property_sideActive_description_master" version_id="1" version_string="1.0"><![CDATA[عرض الشريط الجانبي بالصفحة الرئيسية للحديث]]></phrase>
+    <phrase title="style_property_sideActive_master" version_id="1" version_string="1.0"><![CDATA[عرض الشريط الجانبي]]></phrase>
+    <phrase title="style_property_subInfo_description_master" version_id="1" version_string="1.0"><![CDATA[تنسيق المحيط الخاص بالمعلومات الفرعية و التي تحتوي على معلومات الحديث كالراوي و غيره.]]></phrase>
+    <phrase title="style_property_subInfo_master" version_id="1" version_string="1.0"><![CDATA[إطار المعلومات الفرعية]]></phrase>
+  </phrases>
+  <route_prefixes>
+    <route_type type="public">
+      <prefix original_prefix="hadith" class="Hadith_Route_Hadith" build_link="data_only"/>
+    </route_type>
+  </route_prefixes>
+  <style_properties>
+    <property property_name="hadithMain" property_type="css" definition="1" group_name="hadith" title="حقل البحث" description="تنسيق حقل البحث الموجود بالصفحة الرئيسية." css_components="text,background,border,layout,extra" scalar_type="" scalar_parameters="" display_order="10" sub_group=""><![CDATA[{"color":"@dimmedTextColor","extra":"line-height: 24px;","font-size":"18px","height":"24px","margin-bottom":"0","margin-right":"10px","padding-all":"12px","width":"72%"}]]></property>
+    <property property_name="sideActive" property_type="scalar" definition="1" group_name="hadith" title="عرض الشريط الجانبي" description="عرض الشريط الجانبي بالصفحة الرئيسية للحديث" css_components="" scalar_type="boolean" scalar_parameters="" display_order="1" sub_group=""><![CDATA[1]]></property>
+    <property property_name="hadithContent" property_type="css" definition="1" group_name="hadith" title="محيط نتائج البحث" description="تنسيق الإطار المحيط بنتائج البحث" css_components="text,background,border,layout,extra" scalar_type="" scalar_parameters="" display_order="20" sub_group=""><![CDATA[{"background-color":"@contentBackground","border-color":"@primaryLighter","border-radius":"10px","border-style":"solid","border-width":"1px","margin-bottom":"10px","margin-left":"auto","margin-right":"auto","margin-top":"10px","padding-all":"10px"}]]></property>
+    <property property_name="searchKey" property_type="css" definition="1" group_name="hadith" title="كلمة البحث" description="تمييز كلمة البحث" css_components="text" scalar_type="" scalar_parameters="" display_order="50" sub_group=""><![CDATA[{"color":"red","font-size":"18px","font-weight":"bold"}]]></property>
+    <property property_name="subInfo" property_type="css" definition="1" group_name="hadith" title="إطار المعلومات الفرعية" description="تنسيق المحيط الخاص بالمعلومات الفرعية و التي تحتوي على معلومات الحديث كالراوي و غيره." css_components="text,background,border,layout,extra" scalar_type="" scalar_parameters="" display_order="30" sub_group=""><![CDATA[{"background-color":"@primaryLighterStill","background-image":"@imagePath\/xenforo\/gradients\/category-23px-light.png","background-position":"top","background-repeat":"repeat-x","border-bottom-color":"@primaryLighter","border-bottom-style":"solid","border-bottom-width":"1px","color":"@primaryLightish","extra":"line-height: 16px;","font-size":"11px","padding-bottom":"4px","padding-left":"10px","padding-right":"10px","padding-top":"4px"}]]></property>
+    <property property_name="rawiInfo" property_type="css" definition="1" group_name="hadith" title="معلومات الحديث" description="معلومات الحديث، الراوي و الصفحة و الصحة ... الخ" css_components="text" scalar_type="" scalar_parameters="" display_order="40" sub_group=""><![CDATA[{"color":"#bb5700"}]]></property>
+    <property property_name="showShare" property_type="scalar" definition="1" group_name="hadith" title="عرض مشاركة الصفحة" description="عرض ايقونات مشاركة الصفحة في وسائل التواصل." css_components="" scalar_type="boolean" scalar_parameters="" display_order="10" sub_group=""><![CDATA[1]]></property>
+    <property property_name="searchbtn" property_type="css" definition="1" group_name="hadith" title="زر البحث" description="" css_components="text,background,border,layout,extra" scalar_type="" scalar_parameters="" display_order="60" sub_group=""><![CDATA[{"extra":"font-weight: 600;\nline-height: 19px;\nmin-height: 48px;","font-size":"18px","padding-bottom":"5px","padding-left":"30px","padding-right":"30px","padding-top":"8px"}]]></property>
+    <group group_name="hadith" display_order="2000">
+      <title>تنسيق صفحة الحديث</title>
+      <description>تنسيق صفحة الحديث</description>
+    </group>
+  </style_properties>
+  <templates>
+    <template title="hadith" version_id="2" version_string="1.1"><![CDATA[<xen:require css="hadith.css" />
+
+<script type="text/javascript">
+
+function check_hadith(){
+
+	$.getJSON("http://dorar.net/dorar_api.json?skey=" + $("#skey").attr("value") + "&callback=?", function(data){
+
+	  $("#dorar").html("");
+	  $.each(data.ahadith, function(index, item){
+		$("#dorar").append("<span class='qalink' >" + item + "</span>");
+	  });
+	});
+	
+	
+}
+</script>
+	
+<xen:title>{xen:phrase hadith_confirm}</xen:title>
+<xen:description>{xen:phrase hadith_desc}</xen:description>
+
+	<div class="sectionMain">
+		<span>أدخل كلمات البحث: </span>
+		<input class="textCtrl search-term" type="text" id="skey" placeholder="أدخل جزءاً من الحديث للبحث عنه" />
+		<button onclick="check_hadith()" class="button primary search-btn" > بحث </button>
+		
+		<div id="dorar" class="section">
+				
+		</div>
+	</div>
+<div class="importantMessage">{xen:phrase hadith_dorar}</div>
+<xen:if is="{xen:property showShare}">
+<xen:include template="share_page">
+	<xen:set var="$url">{xen:link 'canonical:hadith'}</xen:set>
+</xen:include>
+</xen:if>
+<xen:if is="{xen:property sideActive}">
+<xen:sidebar>
+
+</xen:sidebar>
+</xen:if>
+
+<xen:comment>
+<form action="" method="post" class="xenForm" >
+                    <input class="textCtrl" type="text" id="s" name="s" placeholder="أدخل جزءاً من الحديث للبحث عنه" />
+                    <input accesskey="s" class="button primary" id="SubmitButton" type="submit" value="بحث" />
+                    <input type="hidden" name="_xfToken" value="{$visitor.csrf_token_page}" />
+                    <div class="sectionMain" id="dorar">
+                    {$haditt}
+                    </div>
+</form>
+</xen:comment>                ]]></template>
+    <template title="hadith.css" version_id="2" version_string="1.1"><![CDATA[p.hadith
+{
+	{xen:property hadithContent}
+}
+p.hadith-info
+{
+	{xen:property subInfo}
+}
+
+input.search-term
+{
+	{xen:property hadithMain}
+}
+
+button.search-btn
+{
+	{xen:property searchbtn}
+}		
+						
+.info-subtitle
+{
+	{xen:property rawiInfo}
+}
+		
+.search-keys
+{
+	{xen:property searchKey}
+}]]></template>
+  </templates>
+  <public_template_modifications/>
+  <bb_code_media_sites/>
+  <bb_codes/>
+</addon>
